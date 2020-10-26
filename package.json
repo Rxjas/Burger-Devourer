@@ -1,0 +1,26 @@
+{
+  "name": "Burger-Devourer",
+  "version": "1.0.0",
+  "description": "Add burgers to a list that you will eat and then check them off as you eat them!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rxjas/Burger-Devourer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rxjas/Burger-Devourer/issues"
+  },
+  "homepage": "https://github.com/Rxjas/Burger-Devourer#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1"
+  }
+}
