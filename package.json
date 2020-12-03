@@ -1,5 +1,5 @@
 {
-  "name": "Burger-Devourer",
+  "name": "burger_devourer",
   "version": "1.0.0",
   "description": "Add burgers to a list that you will eat and then check them off as you eat them!",
   "main": "server.js",
