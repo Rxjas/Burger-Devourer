@@ -4,13 +4,13 @@
 
 <ul>
   {{#each burgers}}
-  {{#unless devoured}}
-    <li>
-      {{burger_name}}
-      <button>
-        Devour Burger!
-      </button>
-    </li>
+    {{#unless devoured}}
+      <li>
+        {{burger_name}}
+          <button>
+            Devour Burger!
+          </button>
+      </li>
     {{/unless}}
   {{/each}}
 </ul>
@@ -25,24 +25,19 @@
           <button>
             Devour Burger!
           </button>
-    </li>
+      </li>
     {{/if}}
   {{/each}}
 </ul>
 
-<h2>Add a Cat</h2>
+{{!-- No need to change but the JS --}}
+<h2>Add a Burger!</h2>
 <form class="create-form">
 
   <div class="form-group">
-    <label for="ca">Cat Name:</label>
+    <label for="ca">Name of Burger:</label>
     <input type="text" id="ca" name="name">
   </div>
 
-  <div class="form-group">
-    <label for="sleepy">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div>
-
-  <button type="submit">Add Cat</button>
+  <button type="submit">Add Burger</button>
 </form>

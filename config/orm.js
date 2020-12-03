@@ -10,10 +10,10 @@ var orm = {
     },
 
     insertOne: function(vals, cb){
-        var queryString = "INSERT INTO burgers_db.burgers (burger_name) VALUES (??)";
+        var queryString = "INSERT INTO burgers_db.burgers (burger_name) VALUES ('";
 
         queryString += vals;
-        queryString += ") ";
+        queryString += "')";
     
         connection.query(queryString, vals, function(err, result) {
           if (err) {
@@ -25,7 +25,10 @@ var orm = {
     },
 
     updateOne: function(vals, cb){
-        var queryString = "UPDATE burgers_db.burgers SET devoured = true  WHERE id = (??)";
+        var queryString = "UPDATE burgers_db.burgers SET devoured = true  WHERE id = ("
+         queryString += vals;
+         queryString += ")";
+         
         query.connection(queryString, vals, function(err, result){
             if (err) {throw err;}
             cb(result)

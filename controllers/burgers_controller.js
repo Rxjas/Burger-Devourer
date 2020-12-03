@@ -11,6 +11,24 @@ router.get("/",function(req,res){
     res.render("index", hbsObject);
   });
 });
+
+router.post("/api/burgers", function(req, res){
+  burger.create(
+    [req.body.name],
+    function(result){
+      res.json({ id: result.insertId})
+    }
+  )
+});
+
+router.delete("/api/burgers/:id", function(req,res){
+  var result = req.params.id
+  burger.update(result, function(err){
+    err
+  } )
+});
+
+
   
 module.exports = router;
 //create router
