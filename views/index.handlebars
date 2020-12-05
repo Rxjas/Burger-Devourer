@@ -1,40 +1,52 @@
-<h1>Devour The Burger!</h1>
+<h1 class="mt-2 pt-2 mb-2 pb-2">Devour The Burger!</h1>
 
-<h2>Burgers to Devour!</h2>
+<div class="row">
+  <div class="col">
 
-<ul>
-  {{#each burgers}}
-  {{#unless devoured}}
-  <li>
-    {{burger_name}}
-    <button class="change-devour" data-id="{{id}}">
-      Devour Burger!
-    </button>
-  </li>
-  {{/unless}}
-  {{/each}}
-</ul>
+    <h2>Burgers to Devour!</h2>
 
-<h2>Burgers Devoured Thus Far!</h2>
-
-<ul>
-  {{#each burgers}}
-  {{#if devoured}}
-  <li>
-    {{burger_name}}
-  </li>
-  {{/if}}
-  {{/each}}
-</ul>
-
-{{!-- No need to change but the JS --}}
-<h2>Add a Burger!</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Name of Burger:</label>
-    <input type="text" id="ca" name="name">
+    <ul class="list-group">
+      {{#each burgers}}
+      {{#unless devoured}}
+      <li class="list-group-item">
+        {{burger_name}}
+        <button class="change-devour btn btn-info" data-id="{{id}}">
+          Devour Burger!
+        </button>
+      </li>
+      {{/unless}}
+      {{/each}}
+    </ul>
   </div>
 
-  <button type="submit">Add Burger</button>
-</form>
+  <div class="col">
+    <h2>Burgers Devoured Thus Far!</h2>
+    <ul class="list-group">
+      {{#each burgers}}
+      {{#if devoured}}
+      <li class="list-group-item">
+        {{burger_name}}
+      </li>
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+  {{!-- End of Container --}}
+</div>
+
+{{!-- No need to change but the JS --}}
+<div class="row ml-4 mt-3 mb-1">
+  <h2>Add a Burger!</h2>
+</div>
+
+<div class="row ml-4">
+  <form class="create-form">
+
+    <div class="form-group">
+      <label for="ca">Name of Burger:</label>
+      <input type="text" id="ca" name="name">
+      <button class="btn btn-dark" type="submit">Add Burger</button>
+    </div>
+
+  </form>
+</div>
