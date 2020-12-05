@@ -2,7 +2,7 @@ var connection = require("../config/connection");
 //TBD
 var orm = {
     selectAll: function (cb) {
-        var queryString = "SELECT * FROM burgers_db.burgers;";
+        var queryString = "SELECT * FROM burgers;";
         connection.query(queryString, function (err, result) {
             if (err) { throw err; };
             cb(result);
@@ -10,7 +10,7 @@ var orm = {
     },
 
     insertOne: function (vals, cb) {
-        var queryString = "INSERT INTO burgers_db.burgers (burger_name) VALUES ('";
+        var queryString = "INSERT INTO burgers (burger_name) VALUES ('";
 
         queryString += vals;
         queryString += "')";
@@ -25,7 +25,7 @@ var orm = {
     },
 
     updateOne: function (vals, cb) {
-        var queryString = "UPDATE burgers_db.burgers SET devoured = true  WHERE id = ("
+        var queryString = "UPDATE burgers SET devoured = true  WHERE id = ("
         queryString += vals;
         queryString += ")";
 
