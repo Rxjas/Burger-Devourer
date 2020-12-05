@@ -21,10 +21,11 @@ router.post("/api/burgers", function(req, res){
   )
 });
 
-router.delete("/api/burgers/:id", function(req,res){
+router.put("/api/burgers/:id", function(req,res){
   var result = req.params.id
+  console.log(result)
   burger.update(result, function(err){
-    err
+    console.log(err)
   } )
 });
 

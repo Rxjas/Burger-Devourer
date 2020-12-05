@@ -29,7 +29,7 @@ var orm = {
          queryString += vals;
          queryString += ")";
          
-        query.connection(queryString, vals, function(err, result){
+        connection.query(queryString, vals, function(err, result){
             if (err) {throw err;}
             cb(result)
         });
