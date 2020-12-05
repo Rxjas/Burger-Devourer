@@ -4,7 +4,7 @@ var orm = {
     selectAll: function (cb) {
         var queryString = "SELECT * FROM burgers_db.burgers;";
         connection.query(queryString, function (err, result) {
-            if (err) { throw err; }
+            if (err) { throw err; };
             cb(result);
         });
     },
@@ -18,7 +18,7 @@ var orm = {
         connection.query(queryString, vals, function (err, result) {
             if (err) {
                 throw err;
-            }
+            };
 
             cb(result);
         });
@@ -30,8 +30,8 @@ var orm = {
         queryString += ")";
 
         connection.query(queryString, vals, function (err, result) {
-            if (err) { throw err; }
-            cb(result)
+            if (err) {throw err};
+            cb(result);
         });
     },
 };// end of ORM
